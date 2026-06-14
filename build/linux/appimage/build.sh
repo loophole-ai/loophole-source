@@ -23,9 +23,9 @@ if [[ "${VSCODE_ARCH}" == "x64" ]]; then
 
   # add update's url
   if [[ "${VSCODE_QUALITY}" == "insider" ]]; then
-    sed -i 's/generate_type2_appimage/generate_type2_appimage -u "gh-releases-zsync|VSCodium|vscodium-insiders|latest|*.AppImage.zsync"/' pkg2appimage.AppDir/AppRun
+    sed -i 's/generate_type2_appimage/generate_type2_appimage -u "gh-releases-zsync|loophole-ai|loophole-insiders|latest|*.AppImage.zsync"/' pkg2appimage.AppDir/AppRun
   else
-    sed -i 's/generate_type2_appimage/generate_type2_appimage -u "gh-releases-zsync|VSCodium|vscodium|latest|*.AppImage.zsync"/' pkg2appimage.AppDir/AppRun
+    sed -i 's/generate_type2_appimage/generate_type2_appimage -u "gh-releases-zsync|loophole-ai|loophole-ide|latest|*.AppImage.zsync"/' pkg2appimage.AppDir/AppRun
   fi
   # remove check so build in docker can succeed
   sed -i 's/grep docker/# grep docker/' pkg2appimage.AppDir/usr/share/pkg2appimage/functions.sh
@@ -42,13 +42,13 @@ if [[ "${VSCODE_ARCH}" == "x64" ]]; then
     sed -i "s|@@ICON@@|${APP_NAME_LC}|g" recipe.yml
   fi
 
-  # workaround that enforces x86 ARCH for pkg2appimage having /__w/vscodium/vscodium/build/linux/appimage/VSCodium/VSCodium.AppDir/usr/share/codium/resources/app/node_modules/rc/index.js is of architecture armhf
+  # workaround that enforces x86 ARCH for pkg2appimage having /__w/loophole-ai/loophole-ide/build/linux/appimage/Loophole/Loophole.AppDir/usr/share/loophole/resources/app/node_modules/rc/index.js is of architecture armhf
   export ARCH=x86_64
   bash -ex pkg2appimage.AppDir/AppRun recipe.yml
 
   rm -f pkg2appimage-*.AppImage
   rm -rf pkg2appimage.AppDir
-  rm -rf VSCodium*
+  rm -rf Loophole*
 fi
 
 cd "${CALLER_DIR}"

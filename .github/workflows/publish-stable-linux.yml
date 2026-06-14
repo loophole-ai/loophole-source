@@ -8,9 +8,9 @@ on:
 
 env:
   ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: true
-  APP_NAME: VSCodium
+  APP_NAME: Loophole
   ASSETS_REPOSITORY: ${{ github.repository }}
-  BINARY_NAME: codium
+  BINARY_NAME: loophole
   DISABLE_UPDATE: yes
   GH_REPO_PATH: ${{ github.repository }}
   GITHUB_BRANCH: master
@@ -38,7 +38,7 @@ jobs:
       - name: Clone VSCode repo
         run: ./get_repo.sh
 
-      - name: Check existing VSCodium tags/releases
+      - name: Check existing Loophole tags/releases
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           CHECK_ALL: yes
@@ -131,27 +131,27 @@ jobs:
         - slug: X64
           vscode_arch: x64
           npm_arch: x64
-          image: vscodium/vscodium-linux-build-agent:focal-x64
+          image: loophole-ai/loophole-linux-build-agent:focal-x64
         - slug: ARM64
           vscode_arch: arm64
           npm_arch: arm64
-          image: vscodium/vscodium-linux-build-agent:focal-arm64
+          image: loophole-ai/loophole-linux-build-agent:focal-arm64
         - slug: ARM32
           vscode_arch: armhf
           npm_arch: arm
-          image: vscodium/vscodium-linux-build-agent:focal-armhf
+          image: loophole-ai/loophole-linux-build-agent:focal-armhf
         - slug: RISCV64
           vscode_arch: riscv64
           npm_arch: riscv64
-          image: vscodium/vscodium-linux-build-agent:focal-riscv64
+          image: loophole-ai/loophole-linux-build-agent:focal-riscv64
         - slug: LOONG64
           vscode_arch: loong64
           npm_arch: loong64
-          image: vscodium/vscodium-linux-build-agent:crimson-loong64
+          image: loophole-ai/loophole-linux-build-agent:crimson-loong64
         - slug: PPC64
           vscode_arch: ppc64le
           npm_arch: ppc64
-          image: vscodium/vscodium-linux-build-agent:focal-ppc64le
+          image: loophole-ai/loophole-linux-build-agent:focal-ppc64le
     container:
       image: ${{ matrix.image }}
     env:
@@ -177,7 +177,7 @@ jobs:
         run: ./build/linux/install_gh.sh
         if: env.DISABLED != 'yes' && env.SHOULD_BUILD == 'yes'
 
-      - name: Check existing VSCodium tags/releases
+      - name: Check existing Loophole tags/releases
         env:
           CHECK_REH: 'no'
           DISABLE_APPIMAGE: ${{ vars.DISABLE_STABLE_APPIMAGE }}
@@ -307,7 +307,7 @@ jobs:
         run: ./build/linux/install_gh.sh
         if: env.DISABLED != 'yes'
 
-      - name: Check existing VSCodium tags/releases
+      - name: Check existing Loophole tags/releases
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           CHECK_ONLY_REH: 'yes'
@@ -383,7 +383,7 @@ jobs:
       - name: Install GH
         run: ./build/linux/install_gh.sh
 
-      - name: Check existing VSCodium tags/releases
+      - name: Check existing Loophole tags/releases
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           CHECK_ONLY_REH: 'yes'
@@ -424,7 +424,7 @@ jobs:
       fail-fast: false
       matrix:
         include:
-        - package_name: vscodium
+        - package_name: loophole
           package_type: stable
 
     steps:
@@ -446,8 +446,8 @@ jobs:
     permissions: {}
     env:
       RELEASE_VERSION: ${{ needs.check.outputs.RELEASE_VERSION }}
-      SNAP_NAME: codium
-      SNAP_PUBLISHER: vscodium
+      SNAP_NAME: loophole
+      SNAP_PUBLISHER: loophole
     strategy:
       fail-fast: false
       matrix:
@@ -527,5 +527,5 @@ jobs:
         uses: peter-evans/repository-dispatch@28959ce8df70de7be546dd1250a005dd32156697 # v4.0.1
         with:
           token: ${{ secrets.STRONGER_GITHUB_TOKEN }}
-          repository: VSCodium/repositories-linux
+          repository: loophole-ai/loophole-repositories-linux
           event-type: deploy

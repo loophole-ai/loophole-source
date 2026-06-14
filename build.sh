@@ -5,6 +5,12 @@ set -ex
 
 . version.sh
 
+# Load custom version configuration if it exists
+if [[ -f "version.conf" ]]; then
+  . version.conf
+  echo "Using custom version: ${RELEASE_VERSION}"
+fi
+
 if [[ "${SHOULD_BUILD}" == "yes" ]]; then
   echo "MS_COMMIT=\"${MS_COMMIT}\""
 

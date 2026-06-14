@@ -44,21 +44,19 @@ setpath "product" "introductoryVideosUrl" "https://go.microsoft.com/fwlink/?link
 setpath "product" "keyboardShortcutsUrlLinux" "https://go.microsoft.com/fwlink/?linkid=832144"
 setpath "product" "keyboardShortcutsUrlMac" "https://go.microsoft.com/fwlink/?linkid=832143"
 setpath "product" "keyboardShortcutsUrlWin" "https://go.microsoft.com/fwlink/?linkid=832145"
-setpath "product" "licenseUrl" "https://github.com/VSCodium/vscodium/blob/master/LICENSE"
+setpath "product" "licenseUrl" "https://github.com/loophole-ai/loophole-ide/blob/master/LICENSE"
 setpath_json "product" "linkProtectionTrustedDomains" '["https://open-vsx.org"]'
 setpath "product" "releaseNotesUrl" "https://go.microsoft.com/fwlink/?LinkID=533483#vscode"
-setpath "product" "reportIssueUrl" "https://github.com/VSCodium/vscodium/issues/new"
-setpath "product" "requestFeatureUrl" "https://go.microsoft.com/fwlink/?LinkID=533482"
-setpath "product" "tipsAndTricksUrl" "https://go.microsoft.com/fwlink/?linkid=852118"
-setpath "product" "twitterUrl" "https://go.microsoft.com/fwlink/?LinkID=533687"
+setpath "product" "reportIssueUrl" "https://github.com/loophole-ai/loophole-ide/issues/new"
+setpath "product" "requestFeatureUrl" "https://github.com/loophole-ai/loophole-ide/issues/new"
 
 if [[ "${DISABLE_UPDATE}" != "yes" ]]; then
-  setpath "product" "updateUrl" "https://raw.githubusercontent.com/VSCodium/versions/refs/heads/master"
+  setpath "product" "updateUrl" "https://raw.githubusercontent.com/loophole-ai/versions/refs/heads/master"
 
   if [[ "${VSCODE_QUALITY}" == "insider" ]]; then
-    setpath "product" "downloadUrl" "https://github.com/VSCodium/vscodium-insiders/releases"
+    setpath "product" "downloadUrl" "https://github.com/loophole-ai/loophole-insiders/releases"
   else
-    setpath "product" "downloadUrl" "https://github.com/VSCodium/vscodium/releases"
+    setpath "product" "downloadUrl" "https://github.com/loophole-ai/loophole-ide/releases"
   fi
 
   # if [[ "${OS_NAME}" == "windows" ]]; then
@@ -67,60 +65,60 @@ if [[ "${DISABLE_UPDATE}" != "yes" ]]; then
 fi
 
 if [[ "${VSCODE_QUALITY}" == "insider" ]]; then
-  setpath "product" "nameShort" "VSCodium - Insiders"
-  setpath "product" "nameLong" "VSCodium - Insiders"
-  setpath "product" "applicationName" "codium-insiders"
-  setpath "product" "dataFolderName" ".vscodium-insiders"
-  setpath "product" "linuxIconName" "vscodium-insiders"
+  setpath "product" "nameShort" "Loophole - Insiders"
+  setpath "product" "nameLong" "Loophole Editor - Insiders"
+  setpath "product" "applicationName" "loophole-insiders"
+  setpath "product" "dataFolderName" ".loophole-insiders"
+  setpath "product" "linuxIconName" "loophole-insiders"
   setpath "product" "quality" "insider"
-  setpath "product" "urlProtocol" "vscodium-insiders"
-  setpath "product" "serverApplicationName" "codium-server-insiders"
-  setpath "product" "serverDataFolderName" ".vscodium-server-insiders"
-  setpath "product" "darwinBundleIdentifier" "com.vscodium.VSCodiumInsiders"
-  setpath "product" "win32AppUserModelId" "VSCodium.VSCodiumInsiders"
-  setpath "product" "win32DirName" "VSCodium Insiders"
-  setpath "product" "win32MutexName" "vscodiuminsiders"
-  setpath "product" "win32NameVersion" "VSCodium Insiders"
-  setpath "product" "win32RegValueName" "VSCodiumInsiders"
-  setpath "product" "win32ShellNameShort" "VSCodium Insiders"
-  setpath "product" "win32AppId" "{{EF35BB36-FA7E-4BB9-B7DA-D1E09F2DA9C9}"
-  setpath "product" "win32x64AppId" "{{B2E0DDB2-120E-4D34-9F7E-8C688FF839A2}"
-  setpath "product" "win32arm64AppId" "{{44721278-64C6-4513-BC45-D48E07830599}"
-  setpath "product" "win32UserAppId" "{{ED2E5618-3E7E-4888-BF3C-A6CCC84F586F}"
-  setpath "product" "win32x64UserAppId" "{{20F79D0D-A9AC-4220-9A81-CE675FFB6B41}"
-  setpath "product" "win32arm64UserAppId" "{{2E362F92-14EA-455A-9ABD-3E656BBBFE71}"
-  setpath "product" "tunnelApplicationName" "codium-insiders-tunnel"
-  setpath "product" "win32TunnelServiceMutex" "vscodiuminsiders-tunnelservice"
-  setpath "product" "win32TunnelMutex" "vscodiuminsiders-tunnel"
-  setpath "product" "win32ContextMenu.x64.clsid" "90AAD229-85FD-43A3-B82D-8598A88829CF"
-  setpath "product" "win32ContextMenu.arm64.clsid" "7544C31C-BDBF-4DDF-B15E-F73A46D6723D"
+  setpath "product" "urlProtocol" "loophole-insiders"
+  setpath "product" "serverApplicationName" "loophole-server-insiders"
+  setpath "product" "serverDataFolderName" ".loophole-server-insiders"
+  setpath "product" "darwinBundleIdentifier" "ai.loophole.LoopholeInsiders"
+  setpath "product" "win32AppUserModelId" "Loophole.LoopholeInsiders"
+  setpath "product" "win32DirName" "Loophole Insiders"
+  setpath "product" "win32MutexName" "loopholeinsiders"
+  setpath "product" "win32NameVersion" "Loophole Insiders"
+  setpath "product" "win32RegValueName" "LoopholeInsiders"
+  setpath "product" "win32ShellNameShort" "Loophole Insiders"
+  setpath "product" "win32AppId" "{{eeb57920-3500-47ec-a435-dd45b1322ed8}"
+  setpath "product" "win32x64AppId" "{{ca0e43b5-34a2-44d7-8dfd-94598d9a42e5}"
+  setpath "product" "win32arm64AppId" "{{3bbe84d9-0cab-481b-bc96-ced44fc5fa2f}"
+  setpath "product" "win32UserAppId" "{{8212eba9-ced1-4fdd-a280-99342688fd34}"
+  setpath "product" "win32x64UserAppId" "{{f52a2bd4-8131-4292-a145-53e0e046e36a}"
+  setpath "product" "win32arm64UserAppId" "{{515e1359-ba44-4821-b8da-95adc0d03bf2}"
+  setpath "product" "tunnelApplicationName" "loophole-insiders-tunnel"
+  setpath "product" "win32TunnelServiceMutex" "loopholeinsiders-tunnelservice"
+  setpath "product" "win32TunnelMutex" "loopholeinsiders-tunnel"
+  setpath "product" "win32ContextMenu.x64.clsid" "3e33ed42-ff8d-436c-bea7-0a89cdf53e51"
+  setpath "product" "win32ContextMenu.arm64.clsid" "34ac3c70-b71c-41ba-ae17-4295828e75f3"
 else
-  setpath "product" "nameShort" "VSCodium"
-  setpath "product" "nameLong" "VSCodium"
-  setpath "product" "applicationName" "codium"
-  setpath "product" "linuxIconName" "vscodium"
+  setpath "product" "nameShort" "Loophole"
+  setpath "product" "nameLong" "Loophole Editor"
+  setpath "product" "applicationName" "loophole"
+  setpath "product" "linuxIconName" "loophole"
   setpath "product" "quality" "stable"
-  setpath "product" "urlProtocol" "vscodium"
-  setpath "product" "serverApplicationName" "codium-server"
-  setpath "product" "serverDataFolderName" ".vscodium-server"
-  setpath "product" "darwinBundleIdentifier" "com.vscodium"
-  setpath "product" "win32AppUserModelId" "VSCodium.VSCodium"
-  setpath "product" "win32DirName" "VSCodium"
-  setpath "product" "win32MutexName" "vscodium"
-  setpath "product" "win32NameVersion" "VSCodium"
-  setpath "product" "win32RegValueName" "VSCodium"
-  setpath "product" "win32ShellNameShort" "VSCodium"
-  setpath "product" "win32AppId" "{{763CBF88-25C6-4B10-952F-326AE657F16B}"
-  setpath "product" "win32x64AppId" "{{88DA3577-054F-4CA1-8122-7D820494CFFB}"
-  setpath "product" "win32arm64AppId" "{{67DEE444-3D04-4258-B92A-BC1F0FF2CAE4}"
-  setpath "product" "win32UserAppId" "{{0FD05EB4-651E-4E78-A062-515204B47A3A}"
-  setpath "product" "win32x64UserAppId" "{{2E1F05D1-C245-4562-81EE-28188DB6FD17}"
-  setpath "product" "win32arm64UserAppId" "{{57FD70A5-1B8D-4875-9F40-C5553F094828}"
-  setpath "product" "tunnelApplicationName" "codium-tunnel"
-  setpath "product" "win32TunnelServiceMutex" "vscodium-tunnelservice"
-  setpath "product" "win32TunnelMutex" "vscodium-tunnel"
-  setpath "product" "win32ContextMenu.x64.clsid" "D910D5E6-B277-4F4A-BDC5-759A34EEE25D"
-  setpath "product" "win32ContextMenu.arm64.clsid" "4852FC55-4A84-4EA1-9C86-D53BE3DF83C0"
+  setpath "product" "urlProtocol" "loophole"
+  setpath "product" "serverApplicationName" "loophole-server"
+  setpath "product" "serverDataFolderName" ".loophole-server"
+  setpath "product" "darwinBundleIdentifier" "ai.loophole.Loophole"
+  setpath "product" "win32AppUserModelId" "Loophole.Loophole"
+  setpath "product" "win32DirName" "Loophole"
+  setpath "product" "win32MutexName" "loophole"
+  setpath "product" "win32NameVersion" "Loophole"
+  setpath "product" "win32RegValueName" "Loophole"
+  setpath "product" "win32ShellNameShort" "Loophole"
+  setpath "product" "win32AppId" "{{c277782f-5478-4aef-95e8-4a7bc7ddbd9c}"
+  setpath "product" "win32x64AppId" "{{b3cfdc17-62ba-457b-9a0c-04efce37dd21}"
+  setpath "product" "win32arm64AppId" "{{eea54ed4-b5c5-4b6f-a99e-9b9c466fa9fc}"
+  setpath "product" "win32UserAppId" "{{ae123319-9891-46ad-a797-d26250b00519}"
+  setpath "product" "win32x64UserAppId" "{{c2b84dfd-7ed7-498c-b9b0-d8da0ee004a8}"
+  setpath "product" "win32arm64UserAppId" "{{994b0a62-b548-4559-b44c-5d42c776dd08}"
+  setpath "product" "tunnelApplicationName" "loophole-tunnel"
+  setpath "product" "win32TunnelServiceMutex" "loophole-tunnelservice"
+  setpath "product" "win32TunnelMutex" "loophole-tunnel"
+  setpath "product" "win32ContextMenu.x64.clsid" "31068ba5-8dab-4a31-8cc4-ea437ea89185"
+  setpath "product" "win32ContextMenu.arm64.clsid" "a811c90b-75c3-4bf6-96ac-714e717a77d0"
 fi
 
 setpath_json "product" "tunnelApplicationConfig" '{}'
@@ -235,16 +233,16 @@ cp package.json{,.bak}
 
 setpath "package" "version" "${RELEASE_VERSION%-insider}"
 
-replace 's|Microsoft Corporation|VSCodium|' package.json
+replace 's|Microsoft Corporation|Loophole AI|' package.json
 
 cp resources/server/manifest.json{,.bak}
 
 if [[ "${VSCODE_QUALITY}" == "insider" ]]; then
-  setpath "resources/server/manifest" "name" "VSCodium - Insiders"
-  setpath "resources/server/manifest" "short_name" "VSCodium - Insiders"
+  setpath "resources/server/manifest" "name" "Loophole - Insiders"
+  setpath "resources/server/manifest" "short_name" "Loophole - Insiders"
 else
-  setpath "resources/server/manifest" "name" "VSCodium"
-  setpath "resources/server/manifest" "short_name" "VSCodium"
+  setpath "resources/server/manifest" "name" "Loophole"
+  setpath "resources/server/manifest" "short_name" "Loophole"
 fi
 
 # announcements
@@ -252,8 +250,9 @@ replace "s|\\[\\/\\* BUILTIN_ANNOUNCEMENTS \\*\\/\\]|$( tr -d '\n' < ../announce
 
 ../undo_telemetry.sh
 
-replace 's|Microsoft Corporation|VSCodium|' build/lib/electron.ts
-replace 's|([0-9]) Microsoft|\1 VSCodium|' build/lib/electron.ts
+replace 's|Microsoft Corporation|Loophole AI|' build/lib/electron.ts
+replace 's|([0-9]) Microsoft|\1 Loophole AI|' build/lib/electron.ts
+
 
 if [[ "${OS_NAME}" == "linux" ]]; then
   # microsoft adds their apt repo to sources
@@ -261,37 +260,37 @@ if [[ "${OS_NAME}" == "linux" ]]; then
   # as we are renaming the application to vscodium
   # we need to edit a line in the post install template
   if [[ "${VSCODE_QUALITY}" == "insider" ]]; then
-    sed -i "s/code-oss/codium-insiders/" resources/linux/debian/postinst.template
+    sed -i "s/code-oss/loophole-insiders/" resources/linux/debian/postinst.template
   else
-    sed -i "s/code-oss/codium/" resources/linux/debian/postinst.template
+    sed -i "s/code-oss/loophole/" resources/linux/debian/postinst.template
   fi
 
   # fix the packages metadata
   # code.appdata.xml
-  sed -i 's|Visual Studio Code|VSCodium|g' resources/linux/code.appdata.xml
-  sed -i 's|https://code.visualstudio.com/docs/setup/linux|https://github.com/VSCodium/vscodium#download-install|' resources/linux/code.appdata.xml
-  sed -i 's|https://code.visualstudio.com/home/home-screenshot-linux-lg.png|https://vscodium.com/img/vscodium.png|' resources/linux/code.appdata.xml
-  sed -i 's|https://code.visualstudio.com|https://vscodium.com|' resources/linux/code.appdata.xml
+  sed -i 's|Visual Studio Code|Loophole|g' resources/linux/code.appdata.xml
+  sed -i 's|https://code.visualstudio.com/docs/setup/linux|https://github.com/loophole-ai/loophole-ide#download-install|' resources/linux/code.appdata.xml
+  sed -i 's|https://code.visualstudio.com/home/home-screenshot-linux-lg.png|https://loophole-ai.github.io/loophole-web/img/loophole.png|' resources/linux/code.appdata.xml
+  sed -i 's|https://code.visualstudio.com|https://loophole-ai.github.io/loophole-web|' resources/linux/code.appdata.xml
 
   # control.template
-  sed -i 's|Microsoft Corporation <vscode-linux@microsoft.com>|VSCodium Team https://github.com/VSCodium/vscodium/graphs/contributors|'  resources/linux/debian/control.template
-  sed -i 's|Visual Studio Code|VSCodium|g' resources/linux/debian/control.template
-  sed -i 's|https://code.visualstudio.com/docs/setup/linux|https://github.com/VSCodium/vscodium#download-install|' resources/linux/debian/control.template
-  sed -i 's|https://code.visualstudio.com|https://vscodium.com|' resources/linux/debian/control.template
+  sed -i 's|Microsoft Corporation <vscode-linux@microsoft.com>|Loophole AI Team https://github.com/loophole-ai/loophole-ide/graphs/contributors|' resources/linux/debian/control.template
+  sed -i 's|Visual Studio Code|Loophole|g' resources/linux/debian/control.template
+  sed -i 's|https://code.visualstudio.com/docs/setup/linux|https://github.com/loophole-ai/loophole-ide#download-install|' resources/linux/debian/control.template
+  sed -i 's|https://code.visualstudio.com|https://loophole-ai.github.io/loophole-web|' resources/linux/debian/control.template
 
   # code.spec.template
-  sed -i 's|Microsoft Corporation|VSCodium Team|' resources/linux/rpm/code.spec.template
-  sed -i 's|Visual Studio Code Team <vscode-linux@microsoft.com>|VSCodium Team https://github.com/VSCodium/vscodium/graphs/contributors|' resources/linux/rpm/code.spec.template
-  sed -i 's|Visual Studio Code|VSCodium|' resources/linux/rpm/code.spec.template
-  sed -i 's|https://code.visualstudio.com/docs/setup/linux|https://github.com/VSCodium/vscodium#download-install|' resources/linux/rpm/code.spec.template
-  sed -i 's|https://code.visualstudio.com|https://vscodium.com|' resources/linux/rpm/code.spec.template
+  sed -i 's|Microsoft Corporation|Loophole AI Team|' resources/linux/rpm/code.spec.template
+  sed -i 's|Visual Studio Code Team <vscode-linux@microsoft.com>|Loophole AI Team https://github.com/loophole-ai/loophole-ide/graphs/contributors|' resources/linux/rpm/code.spec.template
+  sed -i 's|Visual Studio Code|Loophole|' resources/linux/rpm/code.spec.template
+  sed -i 's|https://code.visualstudio.com/docs/setup/linux|https://github.com/loophole-ai/loophole-ide#download-install|' resources/linux/rpm/code.spec.template
+  sed -i 's|https://code.visualstudio.com|https://loophole-ai.github.io/loophole-web|' resources/linux/rpm/code.spec.template
 
   # snapcraft.yaml
-  sed -i 's|Visual Studio Code|VSCodium|' resources/linux/rpm/code.spec.template
+  sed -i 's|Visual Studio Code|Loophole|' resources/linux/rpm/code.spec.template
 elif [[ "${OS_NAME}" == "windows" ]]; then
   # code.iss
-  sed -i 's|https://code.visualstudio.com|https://vscodium.com|' build/win32/code.iss
-  sed -i 's|Microsoft Corporation|VSCodium|' build/win32/code.iss
+  sed -i 's|https://code.visualstudio.com|https://loophole-ai.github.io/loophole-web|' build/win32/code.iss
+  sed -i 's|Microsoft Corporation|Loophole AI|' build/win32/code.iss
 fi
 
 cd ..

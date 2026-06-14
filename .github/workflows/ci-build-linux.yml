@@ -23,8 +23,8 @@ on:
 
 env:
   ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: true
-  APP_NAME: VSCodium
-  BINARY_NAME: ${{ (github.ref == 'refs/heads/insider' || (github.event_name == 'pull_request' && github.event.pull_request.base.ref == 'insider')) && 'codium-insiders' || 'codium' }}
+  APP_NAME: Loophole
+  BINARY_NAME: ${{ (github.ref == 'refs/heads/insider' || (github.event_name == 'pull_request' && github.event.pull_request.base.ref == 'insider')) && 'loophole-insiders' || 'loophole' }}
   DISABLE_UPDATE: yes
   GH_REPO_PATH: ${{ github.repository }}
   GITHUB_BRANCH: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.event.head }}
@@ -110,27 +110,27 @@ jobs:
         - slug: X64
           vscode_arch: x64
           npm_arch: x64
-          image: vscodium/vscodium-linux-build-agent:focal-x64
+          image: loophole-ai/loophole-linux-build-agent:focal-x64
         - slug: ARM64
           vscode_arch: arm64
           npm_arch: arm64
-          image: vscodium/vscodium-linux-build-agent:focal-arm64
+          image: loophole-ai/loophole-linux-build-agent:focal-arm64
         - slug: ARM32
           vscode_arch: armhf
           npm_arch: arm
-          image: vscodium/vscodium-linux-build-agent:focal-armhf
+          image: loophole-ai/loophole-linux-build-agent:focal-armhf
         - slug: RISCV64
           vscode_arch: riscv64
           npm_arch: riscv64
-          image: vscodium/vscodium-linux-build-agent:focal-riscv64
+          image: loophole-ai/loophole-linux-build-agent:focal-riscv64
         - slug: LOONG64
           vscode_arch: loong64
           npm_arch: loong64
-          image: vscodium/vscodium-linux-build-agent:crimson-loong64
+          image: loophole-ai/loophole-linux-build-agent:crimson-loong64
         - slug: PPC64
           vscode_arch: ppc64le
           npm_arch: ppc64
-          image: vscodium/vscodium-linux-build-agent:focal-ppc64le
+          image: loophole-ai/loophole-linux-build-agent:focal-ppc64le
     container:
       image: ${{ matrix.image }}
     env:
