@@ -1,0 +1,9 @@
+[
+  {
+    "action": "add",
+    "path": "extensions/builtIn",
+    "value": [
+      "theme-loophole"
+    ]
+  }
+]

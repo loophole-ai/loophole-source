@@ -1,0 +1,48 @@
+{
+  "name": "theme-loophole",
+  "displayName": "%displayName%",
+  "description": "%description%",
+  "version": "1.0.0",
+  "publisher": "Loophole",
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "__contributes": {
+    "themes": [
+      {
+        "id": "loophole-dark",
+        "label": "Loophole Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/loophole-dark-color-theme.json"
+      },
+      {
+        "id": "loophole-light",
+        "label": "Loophole Light",
+        "uiTheme": "vs",
+        "path": "./themes/loophole-light-color-theme.json"
+      }
+    ]
+  },
+  "contributes": {
+    "themes": [
+      {
+        "id": "loophole-dark",
+        "label": "Loophole Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/loophole-dark-color-theme.json"
+      },
+      {
+        "id": "loophole-light",
+        "label": "Loophole Light",
+        "uiTheme": "vs",
+        "path": "./themes/loophole-light-color-theme.json"
+      }
+    ]
+  },
+  "scripts": {
+    "update": "node ./build/update-grammars.js"
+  }
+}
