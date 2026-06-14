@@ -1,7 +1,7 @@
 [
   {
     "action": "copy",
-    "source": "../../void",
+    "source": "../void",
     "destination": "src/vs/workbench/contrib/void"
   }
 ]
