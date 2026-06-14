@@ -1,0 +1,19 @@
+diff --git a/src/vs/workbench/workbench.common.main.ts b/src/vs/workbench/workbench.common.main.ts
+index 1234567..abcdefg 100644
+--- a/src/vs/workbench/workbench.common.main.ts
++++ b/src/vs/workbench/workbench.common.main.ts
+@@ -12,6 +12,10 @@ import { registerMainEffect } from 'vs/platform/contextkey/browser/contextkey.js';
+ import 'vs/workbench/browser/layout.js';
+ import 'vs/workbench/browser/web.twalk.js';
+ 
++//#region --- Void (Loophole AI)
++import './contrib/void/browser/void.contribution.js';
++//#endregion
++
+ //#region --- Editor Parts ---
+ import 'vs/workbench/browser/parts/editor/editor.contribution.js';
+ import 'vs/workbench/browser/parts/editor/editorParts.js';
+diff --git a/src/vs/platform/extensionResourceLoader/common/extensionResourceLoader.ts b/src/vs/platform/extensionResourceLoader/common/extensionResourceLoader.ts
+index 1234567..abcdefg 100644
+--- a/src/vs/platform/extensionResourceLoader/common/extensionResourceLoader.ts
++++ b/src/vs/platform/extensionResourceLoader/common/extensionResourceLoader.ts

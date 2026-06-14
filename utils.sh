@@ -38,6 +38,22 @@ apply_actions() {
           fi
         done
       ;;
+      copy)
+        SOURCE=$( jq -r '.source // empty' <<< "${ENTRY}" )
+        DESTINATION=$( jq -r '.destination // empty' <<< "${ENTRY}" )
+
+        if [[ -n "${SOURCE}" && -n "${DESTINATION}" ]]; then
+          if cp -r "${SOURCE}" "${DESTINATION}"; then
+            echo "Copied: ${SOURCE} -> ${DESTINATION}"
+          else
+            echo "Failed to copy: ${SOURCE} -> ${DESTINATION}" >&2
+            exit 4
+          fi
+        else
+          echo "Invalid copy action: source or destination missing" >&2
+          exit 4
+        fi
+      ;;
     esac
   done
 }

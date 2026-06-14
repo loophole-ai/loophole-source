@@ -1,0 +1,2 @@
+# Placeholder for contrib directory
+# The void folder should be moved here by the user

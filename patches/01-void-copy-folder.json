@@ -1,0 +1,7 @@
+[
+  {
+    "action": "copy",
+    "source": "../void/*",
+    "destination": "vscode/src/vs/workbench/contrib/void/"
+  }
+]
