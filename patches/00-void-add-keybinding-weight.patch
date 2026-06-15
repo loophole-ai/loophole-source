@@ -1,0 +1,11 @@
+diff --git a/src/vs/platform/keybinding/common/keybindingsRegistry.ts b/src/vs/platform/keybinding/common/keybindingsRegistry.ts
+index 1234567..abcdefg 100644
+--- a/src/vs/platform/keybinding/common/keybindingsRegistry.ts
++++ b/src/vs/platform/keybinding/common/keybindingsRegistry.ts
+@@ -30,6 +30,7 @@ export const enum KeybindingWeight {
+ 	EditorContrib = 200,
+ 	WorkbenchContrib = 300,
+ 	BuiltinExtension = 400,
++	LoopholeExtension = 450,
+ 	ExternalExtension = 500
+ }

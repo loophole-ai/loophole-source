@@ -14,3 +14,4 @@ index 1234567..abcdefg 100644
  import 'vs/workbench/browser/parts/editor/editor.contribution.js';
  import 'vs/workbench/browser/parts/editor/editorParts.js';
  
+ //#region --- Workbench --- 
