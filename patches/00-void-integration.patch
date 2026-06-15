@@ -13,7 +13,4 @@ index 1234567..abcdefg 100644
  //#region --- Editor Parts ---
  import 'vs/workbench/browser/parts/editor/editor.contribution.js';
  import 'vs/workbench/browser/parts/editor/editorParts.js';
-diff --git a/src/vs/platform/extensionResourceLoader/common/extensionResourceLoader.ts b/src/vs/platform/extensionResourceLoader/common/extensionResourceLoader.ts
-index 1234567..abcdefg 100644
---- a/src/vs/platform/extensionResourceLoader/common/extensionResourceLoader.ts
-+++ b/src/vs/platform/extensionResourceLoader/common/extensionResourceLoader.ts
+ 
