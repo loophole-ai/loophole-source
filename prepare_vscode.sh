@@ -235,6 +235,28 @@ setpath "package" "version" "${RELEASE_VERSION%-insider}"
 
 replace 's|Microsoft Corporation|Loophole AI|' package.json
 
+# Add Void/Loophole AI dependencies
+jsonTmp=$( jq '.dependencies += {
+  "@anthropic-ai/sdk": "^0.40.0",
+  "@google/genai": "^0.13.0",
+  "@mistralai/mistralai": "^1.6.0",
+  "@modelcontextprotocol/sdk": "^1.11.2",
+  "groq-sdk": "^0.20.1",
+  "ollama": "^0.5.15",
+  "openai": "^4.96.0",
+  "posthog-node": "^4.14.0",
+  "zod": "^3.25.76"
+}' package.json )
+echo "${jsonTmp}" > package.json
+
+# Add buildreact scripts
+jsonTmp=$( jq '.scripts += {
+  "buildreact": "cd ./src/vs/workbench/contrib/void/browser/react/ && node build.js && cd ../../../../../../../",
+  "watchreact": "cd ./src/vs/workbench/contrib/void/browser/react/ && node build.js --watch && cd ../../../../../../../",
+  "watchreactd": "deemon npm run watchreact"
+}' package.json )
+echo "${jsonTmp}" > package.json
+
 cp resources/server/manifest.json{,.bak}
 
 if [[ "${VSCODE_QUALITY}" == "insider" ]]; then
