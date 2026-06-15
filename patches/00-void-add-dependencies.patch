@@ -2,18 +2,20 @@ diff --git a/package.json b/package.json
 index 1234567..abcdefg 100644
 --- a/package.json
 +++ b/package.json
-@@ -136,6 +136,14 @@
+@@ -136,6 +136,16 @@
      "native-keymap": "^3.3.5",
      "native-watchdog": "^1.4.3",
      "node-pty": "^1.0.0",
-+    "@anthropic-ai/sdk": "^0.32.0",
-+    "@google/genai": "^0.3.0",
-+    "@mistralai/mistralai": "^1.4.0",
-+    "@modelcontextprotocol/sdk": "^1.0.4",
++    "@anthropic-ai/sdk": "^0.40.0",
++    "@anthropic-ai/sandbox-runtime": "0.0.42",
++    "@google/genai": "^0.13.0",
++    "@mistralai/mistralai": "^1.6.0",
++    "@modelcontextprotocol/sdk": "^1.11.2",
 +    "google-auth-library": "^9.0.0",
-+    "ollama": "^0.5.0",
-+    "openai": "^4.20.0",
-+    "posthog-node": "^4.0.0",
++    "groq-sdk": "^0.20.1",
++    "ollama": "^0.5.15",
++    "openai": "^4.96.0",
++    "posthog-node": "^4.14.0",
      "tas-client-umd": "0.2.0",
      "vscode-oniguruma": "^1.7.0",
      "vscode-textmate": "^9.0.0",
