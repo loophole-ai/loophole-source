@@ -2,15 +2,14 @@ diff --git a/src/vs/workbench/workbench.common.main.ts b/src/vs/workbench/workbe
 index 1234567..abcdefg 100644
 --- a/src/vs/workbench/workbench.common.main.ts
 +++ b/src/vs/workbench/workbench.common.main.ts
-@@ -12,6 +12,10 @@ import { registerMainEffect } from 'vs/platform/contextkey/browser/contextkey.js';
- import 'vs/workbench/browser/layout.js';
- import 'vs/workbench/browser/web.twalk.js';
- 
-+//#region --- Void (Loophole AI)
-+import './contrib/void/browser/void.contribution.js';
-+//#endregion
+@@ -232,8 +232,11 @@
+ import './contrib/mcp/browser/mcp.view.contribution.js';
+ import './contrib/chat/browser/chatSessions/chatSessions.contribution.js';
+ import './contrib/chat/browser/contextContrib/chatContext.contribution.js';
+ import './contrib/imageCarousel/browser/imageCarousel.contribution.js';
 +
- //#region --- Editor Parts ---
- import 'vs/workbench/browser/parts/editor/editor.contribution.js';
- import 'vs/workbench/browser/parts/editor/editorParts.js';
++// Void (Loophole AI)
++import './contrib/void/browser/void.contribution.js';
  
+ // Interactive
+ import './contrib/interactive/browser/interactive.contribution.js';
