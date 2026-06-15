@@ -257,6 +257,8 @@ jsonTmp=$( jq '.scripts += {
 }' package.json )
 echo "${jsonTmp}" > package.json
 
+npm install --ignore-scripts
+
 cp resources/server/manifest.json{,.bak}
 
 if [[ "${VSCODE_QUALITY}" == "insider" ]]; then
