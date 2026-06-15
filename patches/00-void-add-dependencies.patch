@@ -1,28 +1,21 @@
 diff --git a/package.json b/package.json
 --- a/package.json
 +++ b/package.json
-@@ -20,6 +20,9 @@
+@@ -19,6 +19,9 @@
+     "test-build-scripts": "cd build && npm run test",
      "check-cyclic-dependencies": "node build/lib/checkCyclicDependencies.ts out",
      "preinstall": "node build/npm/preinstall.ts",
-     "postinstall": "node build/npm/postinstall.ts",
 +    "buildreact": "cd ./src/vs/workbench/contrib/void/browser/react/ && node build.js && cd ../../../../../../../",
 +    "watchreact": "cd ./src/vs/workbench/contrib/void/browser/react/ && node build.js --watch && cd ../../../../../../../",
 +    "watchreactd": "deemon npm run watchreact",
+     "postinstall": "node build/npm/postinstall.ts",
      "compile": "npm run gulp compile",
      "compile-check-ts-native": "tsgo --project ./src/tsconfig.json --noEmit --skipLibCheck",
-     "watch": "npm-run-all2 -lp watch-client-transpile watch-client watch-extensions",
-@@ -75,6 +78,7 @@
-   "dependencies": {
-     "@microsoft/1ds-core-js": "^3.2.13",
-     "@microsoft/1ds-post-js": "^3.2.13",
-+    "@anthropic-ai/sdk": "^0.40.0",
-     "@microsoft/dev-tunnels-connections": "^1.3.41",
-     "@microsoft/dev-tunnels-contracts": "^1.3.41",
-     "@microsoft/dev-tunnels-management": "^1.3.41",
-@@ -110,6 +114,14 @@
+@@ -109,6 +112,15 @@
      "native-is-elevated": "0.9.0",
      "@vscodium/native-keymap": "3.3.7-258424",
      "node-pty": "^1.2.0-beta.13",
++    "@anthropic-ai/sdk": "^0.40.0",
 +    "@google/genai": "^0.13.0",
 +    "@mistralai/mistralai": "^1.6.0",
 +    "@modelcontextprotocol/sdk": "^1.11.2",
